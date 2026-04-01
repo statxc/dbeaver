@@ -427,7 +427,7 @@ public class SQLQueryJob extends DataSourceJob {
                     }
 
                     if (CommonUtils.isBitSet(result, SQLPragmaHandler.RESULT_CONSUME_QUERY)) {
-                        return false;
+                        return true;
                     }
                 }
             }

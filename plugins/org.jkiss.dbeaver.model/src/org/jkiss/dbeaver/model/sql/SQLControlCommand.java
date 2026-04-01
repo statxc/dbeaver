@@ -70,7 +70,8 @@ public class SQLControlCommand implements SQLScriptElement {
         }
         int divPos = -1;
         for (int i = 0; i < text.length(); i++) {
-            if (!Character.isLetterOrDigit(text.charAt(i))) {
+            char ch = text.charAt(i);
+            if (!Character.isLetterOrDigit(ch) && ch != '_') {
                 divPos = i;
                 break;
             }

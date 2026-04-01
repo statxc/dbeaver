@@ -242,6 +242,14 @@ public class SQLScriptContext implements DBCScriptContext {
         }
     }
 
+    public void removePragma(@NotNull String id) {
+        if (parentContext != null) {
+            parentContext.removePragma(id);
+        } else {
+            pragmas.remove(id);
+        }
+    }
+
     @Override
     public <T> T getData(String key) {
         return (T)data.get(key);
